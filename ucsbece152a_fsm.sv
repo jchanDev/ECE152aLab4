@@ -21,7 +21,7 @@ assign state_o = state_q;
 // TODO: Implement the FSM and drive `pattern_o`
 always_comb begin
   state_d = S000_000;
-   /*if((left_i == 0) && (right_i == 0) && (hazard_i == 0)) begin
+   if((left_i == 0) && (right_i == 0) && (hazard_i == 0)) begin
       case(state_q)
          S000_000: state_d = S000_000;
          S000_100: state_d = S000_000;
@@ -32,8 +32,8 @@ always_comb begin
          S111_000: state_d = S000_000;
          S111_111: state_d = S000_000;
       endcase
-   end*/
-   if(((left_i == 0) && (right_i == 0) && (hazard_i == 1))||
+   end
+   else if(((left_i == 0) && (right_i == 0) && (hazard_i == 1))||
    ((left_i == 0) && (right_i == 1) && (hazard_i == 1))||
    ((left_i == 1) && (right_i == 0) && (hazard_i == 1))||
    ((left_i == 1) && (right_i == 1) && (hazard_i == 0))||
