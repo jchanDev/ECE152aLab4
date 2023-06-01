@@ -84,7 +84,7 @@ end
 always_comb begin
   case(state_o)
          S000_000: pattern_o = 6'b000_000;
-         S000_100: pattern_o = 6'b100_000;
+         S000_100: pattern_o = 6'b000_100;
          S000_110: pattern_o = 6'b000_110;
          S000_111: pattern_o = 6'b000_111;
          S001_000: pattern_o = 6'b001_000;
