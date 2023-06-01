@@ -88,7 +88,7 @@ always_comb begin
          S000_110: pattern_o = 6'b000_110;
          S000_111: pattern_o = 6'b000_111;
          S001_000: pattern_o = 6'b001_000;
-         S011_000: pattern_o = 6'b001_000;
+         S011_000: pattern_o = 6'b011_000;
          S111_000: pattern_o = 6'b111_000;
          S111_111: pattern_o = 6'b111_111;
   endcase
