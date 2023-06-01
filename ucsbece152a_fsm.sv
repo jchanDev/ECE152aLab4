@@ -5,6 +5,16 @@
 * File: ucsbece152a_fsm.sv
 * Description: Starter code for fsm.
 */
+typedef enum logic [2:0] {
+   S000_000,
+   S000_100,
+   S000_110,
+   S000_111,
+   S001_000,
+   S011_000,
+   S111_000,
+   S111_111
+} state_t;
 module ucsbece152a_fsm (
    input logic clk,
    input logic rst_n,
@@ -17,18 +27,6 @@ module ucsbece152a_fsm (
    output logic [5:0] pattern_o
 );
 //import taillights_pkg::*;
-
-typedef enum logic [2:0] {
-   S000_000,
-   S000_100,
-   S000_110,
-   S000_111,
-   S001_000,
-   S011_000,
-   S111_000,
-   S111_111
-} state_t;
-
 state_t state_d, state_q = S000_000;
 assign state_o = state_q;
 // TODO: Implement the FSM and drive `pattern_o`
